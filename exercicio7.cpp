@@ -1,18 +1,39 @@
-//07-
 #include <iostream>
+#define num 10
 
 using namespace std;
 
-int main()
+struct ordem
 {
-	int c = 0;
-	for (int i = 0; i <= 500; i++)
+	int vet[num];
+	int n;
+};
+
+int main(int argc, char** argv)
+{
+	ordem numero;
+	numero.vet;
+	numero.n = 1;
+
+	for (int i = 0; i < num; i++)
 	{
-		if (c % 5 == 0)
-		{
-			cout << c << endl;
-		}
-		c++;
+		numero.vet[i] = numero.n;
+		numero.n++;
 	}
+	
+	cout << "Ordem crescente: " << endl;
+	for (int i = 0; i < num; i++)
+	{
+		cout << numero.vet[i] << endl;;
+	}
+	
+
+	cout << "Ordem decrescente: " << endl;
+	
+	for (int i = num - 1; i >= 0; i--)
+	{
+		cout << numero.vet[i] << endl;
+	}
+
 	return 0;
 }
